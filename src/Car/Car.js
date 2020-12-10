@@ -1,18 +1,8 @@
 import React from 'react';
 
-// function Car() {
-//   return (
-//     <div>This is a Car component</div>
-//   )
-// }
-// const car = () => (
-//   <div>This is a Car component
-//     <strong>Test</strong>
-//   </div>
-// )
-
 export default () => (
-  <div>This is a Car component
-    <strong>Test</strong>
+  <div>
+    <p>This is a Car component</p>
+    <p>Number: <strong>{Math.round(Math.random() * 100)}</strong></p>
   </div>
 )
