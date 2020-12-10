@@ -13,10 +13,12 @@ class App extends Component {
   }
 
   changeTitleHandler = () => {
-    console.log('clicked')
+    const oldTitle = this.state.pageTitle + ' (changed)'
+    this.setState({pageTitle: oldTitle})
   }
 
   render() {
+    console.log('render')
     const divStyle = {
       textAlign: 'center'
     }
