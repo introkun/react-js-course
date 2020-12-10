@@ -1,27 +1,18 @@
-import React from 'react'
+import React from 'react';
 
-// function car() {
+// function Car() {
 //   return (
-//     <div>This is car component</div>
+//     <div>This is a Car component</div>
 //   )
 // }
-
-// const car = () => {
-//   return (
-//     <div>This is car component</div>
-//   )
-// }
-
 // const car = () => (
-//   <div>
-//     This is car component
-//     <strong>test</strong>
+//   <div>This is a Car component
+//     <strong>Test</strong>
 //   </div>
 // )
 
 export default () => (
-  <div>
-    This is car component
-    <strong>test</strong>
+  <div>This is a Car component
+    <strong>Test</strong>
   </div>
 )
