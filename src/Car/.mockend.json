@@ -1,0 +1,6 @@
+{
+  "Car": {
+    "name": "string",
+    "year": "int"
+  }
+}
