@@ -9,12 +9,14 @@
 
 }
 
+$active-color: green;
+
 .input:active, .input:focus {
     outline: none;
 }
 
 .input.green {
-    border: 1px solid green;
+    border: 1px solid $active-color;
 }
 
 .input.red {
@@ -22,6 +24,6 @@
 }
 
 .input.bold {
-    border: 2px solid green;
+    border: 2px solid $active-color;
     font-weight: bold;
 }
