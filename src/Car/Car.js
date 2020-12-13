@@ -25,15 +25,15 @@ class Car extends React.Component {
   //   console.log('Car UNSAFE_componentWillUpdate', nextProps, nextState)
   // }
 
-  static getDerivedStateFromProps(nextProps, prevState) {
-    console.log('Car getDerivedStateFromProps', nextProps, prevState)
+  // static getDerivedStateFromProps(nextProps, prevState) {
+  //   console.log('Car getDerivedStateFromProps', nextProps, prevState)
 
-    return prevState
-  }
+  //   return prevState
+  // }
 
-  getSnapshotBeforeUpdate() {
-    console.log('Car getSnapshotBeforeUpdate')
-  }
+  // getSnapshotBeforeUpdate() {
+  //   console.log('Car getSnapshotBeforeUpdate')
+  // }
 
   componentDidUpdate() {
     console.log('Car componentDidUpdate')
@@ -46,6 +46,9 @@ class Car extends React.Component {
   render() {
     console.log('Car render')
     const inputClasses = ['input']
+
+    if (Math.random() > 0.7)
+      throw new Error('Car random failed')
 
     if (this.props.name)
       inputClasses.push('green')
