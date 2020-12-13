@@ -5,9 +5,14 @@ import './Car.scss'
 
 class Car extends React.Component {
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    console.log('Car UNSAFE_componentWillReceiveProps', nextProps)
+  constructor(props) {
+    super(props)
+    this.state = {}
   }
+
+  // UNSAFE_componentWillReceiveProps(nextProps) {
+  //   console.log('Car UNSAFE_componentWillReceiveProps', nextProps)
+  // }
 
   shouldComponentUpdate(nextProps, nextState) {
     console.log('Car shouldComponentUpdate', nextProps, nextState)
@@ -16,8 +21,18 @@ class Car extends React.Component {
     return true
   }
 
-  UNSAFE_componentWillUpdate(nextProps, nextState) {
-    console.log('Car UNSAFE_componentWillUpdate', nextProps, nextState)
+  // UNSAFE_componentWillUpdate(nextProps, nextState) {
+  //   console.log('Car UNSAFE_componentWillUpdate', nextProps, nextState)
+  // }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    console.log('Car getDerivedStateFromProps', nextProps, prevState)
+
+    return prevState
+  }
+
+  getSnapshotBeforeUpdate() {
+    console.log('Car getSnapshotBeforeUpdate')
   }
 
   componentDidUpdate() {
