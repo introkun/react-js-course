@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from './Car.module.scss'
 import withClass from '../hoc/withClass'
+import PropTypes from 'prop-types'
 
 class Car extends React.Component {
 
@@ -22,7 +23,7 @@ class Car extends React.Component {
       inputClasses.push(classes.bold)
 
     return (
-    <div className={classes.Car}>
+    <React.Fragment>
       <h3>Car name: {this.props.name}</h3>
       <p>Year: <strong>{this.props.year}</strong></p>
       <input
@@ -31,9 +32,16 @@ class Car extends React.Component {
         value={this.props.name}
         className={inputClasses.join(' ')} />
       <button onClick={this.props.onDelete}>Delete</button>
-    </div>
+    </React.Fragment>
     )
   }
+}
+
+Car.propTypes = {
+  name: PropTypes.string.isRequired,
+  year: PropTypes.number,
+  onNameChange: PropTypes.func,
+  onDelete: PropTypes.func
 }
 
 export default withClass(Car, classes.Car)
